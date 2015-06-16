@@ -5,8 +5,7 @@
 	</head>
 	<body>
 		<div id="map" style="height: 632px"></div>
-		<script type="text/javascript">// <![CDATA[
-
+		<script type="text/javascript">
 				var map = L.map('map', {
 					center: [48.959, 36.710],
 					zoom: 10
@@ -20,7 +19,7 @@
 
 				map.addLayer(OpenStreetMap);
 
-				var orm_2 = L.tileLayer('https://github.com/Edward17/WeekTask_14/tree/gh-pages/day_2/z{z}/{x}/{y}.png', {
+				var orm_2 = L.tileLayer('http://github.com/Edward17/WeekTask_14/tree/gh-pages/day_2/z{z}/{x}/{y}.png', {
 					name: 'OpenRailwayMap - day 2', 
 					maxZoom: 10, 
 					attribution: 'Rendering: OpenRailwayMap'
@@ -33,6 +32,6 @@
 				//L.control.layers(baseLayers, overlays).addTo(map);
 
 				map.addLayer(orm_2);
-			// ]]></script>
+		</script>
 	</body>
 </html>
