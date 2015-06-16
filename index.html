@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	</head>
+	<body>
+		<div id="map" style="height: 632px; width: 700px"></div>
+		<script type="text/javascript">// <![CDATA[
+
+				var map = L.map('map', {
+					center: [48.959, 36.710],
+					zoom: 10
+					});
+
+				var OpenStreetMap = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					name: 'OpenStreetMap', 
+					maxZoom: 10, 
+					attribution: 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+					});
+
+				map.addLayer(OpenStreetMap);
+
+				var orm_2 = L.tileLayer('day_2/z{z}/{x}/{y}.png', {
+					name: 'OpenRailwayMap - day 2', 
+					maxZoom: 10, 
+					attribution: 'Rendering: OpenRailwayMap'
+					});
+
+				var baseLayers = {
+					"OpenRailwayMap - day 2": orm_2
+					};
+				var overlays = { };
+				L.control.layers(baseLayers, overlays).addTo(map);
+			// ]]></script>
+	</body>
+</html>
