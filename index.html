@@ -4,7 +4,7 @@
 		<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	</head>
 	<body>
-		<div id="map" style="height: 632px; width: 700px"></div>
+		<div id="map" style="height: 632px"></div>
 		<script type="text/javascript">// <![CDATA[
 
 				var map = L.map('map', {
@@ -20,14 +20,14 @@
 
 				map.addLayer(OpenStreetMap);
 
-				var orm_2 = L.tileLayer('day_2/z{z}/{x}/{y}.png', {
+				var orm_2 = L.tileLayer('https://github.com/Edward17/WeekTask_14/tree/gh-pages/day_2/z{z}/{x}/{y}.png', {
 					name: 'OpenRailwayMap - day 2', 
 					maxZoom: 10, 
 					attribution: 'Rendering: OpenRailwayMap'
 					});
 
 				var baseLayers = {
-					"OpenRailwayMap - day 2": orm_2
+					'OpenRailwayMap - day 2': orm_2
 					};
 				var overlays = { };
 				L.control.layers(baseLayers, overlays).addTo(map);
