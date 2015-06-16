@@ -26,11 +26,13 @@
 					attribution: 'Rendering: OpenRailwayMap'
 					});
 
-				var baseLayers = {
-					'OpenRailwayMap - day 2': orm_2
-					};
-				var overlays = { };
-				L.control.layers(baseLayers, overlays).addTo(map);
+				//var baseLayers = {
+				//	'OpenRailwayMap - day 2': orm_2
+				//	};
+				//var overlays = { };
+				//L.control.layers(baseLayers, overlays).addTo(map);
+
+				map.addLayer(orm_2);
 			// ]]></script>
 	</body>
 </html>
