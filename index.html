@@ -27,9 +27,23 @@
 					minZoom: 10,
 					attribution: 'Rendering: OpenRailwayMap'
 					});
+				var orm_3 = L.tileLayer('https://raw.githubusercontent.com/Edward17/WeekTask_14/gh-pages/day_3/z{z}/{y}/{x}.png', {
+					name: 'OpenRailwayMap - day 3', 
+					maxZoom: 10, 
+					minZoom: 10,
+					attribution: 'Rendering: OpenRailwayMap'
+					});
+				var orm_4 = L.tileLayer('https://raw.githubusercontent.com/Edward17/WeekTask_14/gh-pages/day_3/z{z}/{y}/{x}.png', {
+					name: 'OpenRailwayMap - day 3', 
+					maxZoom: 10, 
+					minZoom: 10,
+					attribution: 'Rendering: OpenRailwayMap'
+					});
 
 				var baseLayers = {
-					'OpenRailwayMap - day 2': orm_2
+					'OpenRailwayMap - day 2': orm_2,
+					'OpenRailwayMap - day 3': orm_3,
+					'OpenRailwayMap - day 4': orm_4
 					};
 				var overlays = { };
 				L.control.layers(baseLayers, overlays).addTo(map);
