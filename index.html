@@ -12,7 +12,7 @@
 					zoom: 10
 					});
 
-				var OpenStreetMap = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				var OpenStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 					name: 'OpenStreetMap', 
 					maxZoom: 10, 
 					minZoom: 10,
@@ -34,7 +34,25 @@
 					attribution: 'Rendering: OpenRailwayMap'
 					});
 				var orm_4 = L.tileLayer('https://raw.githubusercontent.com/Edward17/WeekTask_14/gh-pages/day_3/z{z}/{y}/{x}.png', {
-					name: 'OpenRailwayMap - day 3', 
+					name: 'OpenRailwayMap - day 4', 
+					maxZoom: 10, 
+					minZoom: 10,
+					attribution: 'Rendering: OpenRailwayMap'
+					});
+				var orm_5 = L.tileLayer('https://raw.githubusercontent.com/Edward17/WeekTask_14/gh-pages/day_5/z{z}/{y}/{x}.png', {
+					name: 'OpenRailwayMap - day 5', 
+					maxZoom: 10, 
+					minZoom: 10,
+					attribution: 'Rendering: OpenRailwayMap'
+					});
+				var orm_6 = L.tileLayer('https://raw.githubusercontent.com/Edward17/WeekTask_14/gh-pages/day_6/z{z}/{y}/{x}.png', {
+					name: 'OpenRailwayMap - day 6', 
+					maxZoom: 10, 
+					minZoom: 10,
+					attribution: 'Rendering: OpenRailwayMap'
+					});
+				var orm_7 = L.tileLayer('https://raw.githubusercontent.com/Edward17/WeekTask_14/gh-pages/day_7/z{z}/{y}/{x}.png', {
+					name: 'OpenRailwayMap - day 7', 
 					maxZoom: 10, 
 					minZoom: 10,
 					attribution: 'Rendering: OpenRailwayMap'
@@ -43,12 +61,13 @@
 				var baseLayers = {
 					'OpenRailwayMap - day 2': orm_2,
 					'OpenRailwayMap - day 3': orm_3,
-					'OpenRailwayMap - day 4': orm_4
+					'OpenRailwayMap - day 4': orm_4,
+					'OpenRailwayMap - day 5': orm_5,
+					'OpenRailwayMap - day 6': orm_6,
+					'OpenRailwayMap - day 7': orm_7
 					};
 				var overlays = { };
 				L.control.layers(baseLayers, overlays).addTo(map);
-
-				//map.addLayer(orm_2);
 		</script>
 	</body>
 </html>
