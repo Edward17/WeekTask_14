@@ -21,6 +21,18 @@
 
 				map.addLayer(OpenStreetMap);
 
+				var orm_before = L.tileLayer('https://raw.githubusercontent.com/Edward17/WeekTask_14/gh-pages/before/z{z}/{y}/{x}.png', {
+					name: 'OpenRailwayMap - before', 
+					maxZoom: 10, 
+					minZoom: 10,
+					attribution: 'Rendering: OpenRailwayMap'
+					});
+				var orm_1 = L.tileLayer('https://raw.githubusercontent.com/Edward17/WeekTask_14/gh-pages/day_1/z{z}/{y}/{x}.png', {
+					name: 'OpenRailwayMap - day 1', 
+					maxZoom: 10, 
+					minZoom: 10,
+					attribution: 'Rendering: OpenRailwayMap'
+					});
 				var orm_2 = L.tileLayer('https://raw.githubusercontent.com/Edward17/WeekTask_14/gh-pages/day_2/z{z}/{y}/{x}.png', {
 					name: 'OpenRailwayMap - day 2', 
 					maxZoom: 10, 
@@ -59,6 +71,8 @@
 					});
 
 				var baseLayers = {
+					'OpenRailwayMap - before': orm_before,
+					'OpenRailwayMap - day 1': orm_1,
 					'OpenRailwayMap - day 2': orm_2,
 					'OpenRailwayMap - day 3': orm_3,
 					'OpenRailwayMap - day 4': orm_4,
